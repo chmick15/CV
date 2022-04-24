@@ -24,7 +24,7 @@ const Hero = () => {
                 <p className='italic text-center'>'Aliquando et insanire jucundum est'</p>
             </div>
             <div className='bg-white text-center col-span-2 rounded-lg m-2'>
-                <button onClick={() => window.open('cvTemp.pdf', '_blank')}>Download my CV here!</button>
+                <button onClick={() => window.open('https://www.canva.com/design/DAE98uJRpGo/view', '_blank')}>Download my CV here!</button>
             </div>
         </div>
     )
