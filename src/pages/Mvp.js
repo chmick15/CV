@@ -19,8 +19,8 @@ function Mvp() {
                 <p>To develop the application we used React Native, Redux, NodeJS, Express, MongoDB, Google API, GitHub</p>
             </div>
             <div className='text-center p-5 sm:text-lg md:text-xl'>
-                <p> <a href='https://github.com/kduperis/veazitFront' target={'_blank'} className="text-green-800 sm:text-slate-800 md:sm:text-red-800 lg:text-purple-800 underline hover:opacity-80">➡️&thinsp;&thinsp;&thinsp;Click here to find the Front-End repository&thinsp;&thinsp;&thinsp;⬅️</a></p>
-                <p> <a href='https://github.com/kduperis/veazitBackend' target={'_blank'} className="text-green-800 sm:text-slate-800 md:text-red-800 lg:text-purple-800 underline hover:opacity-80">➡️&thinsp;&thinsp;&thinsp;Click here to find the Back-End repository&thinsp;&thinsp;&thinsp;⬅️</a></p>
+                <p> <a href='https://github.com/kduperis/veazitFront' target={'_blank'} className="text-green-800 sm:text-slate-800 md:sm:text-red-800 lg:text-purple-800 underline hover:opacity-80">➡️&thinsp;&thinsp;Click here to find the front-end repository&thinsp;&thinsp;⬅️</a></p>
+                <p> <a href='https://github.com/kduperis/veazitBackend' target={'_blank'} className="text-green-800 sm:text-slate-800 md:text-red-800 lg:text-purple-800 underline hover:opacity-80">➡️&thinsp;&thinsp;Click here to find the back-end repository&thinsp;&thinsp;⬅️</a></p>
             </div>
             <div className='text-center italic text-sm sm:text-base md:text-lg'>
                 <p>For a better experience please watch the video on a computer.</p>

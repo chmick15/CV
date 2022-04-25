@@ -31,7 +31,7 @@ const Hero = () => {
                 <p className='italic text-center sm:text-left md:text-center'>'Aliquando et insanire jucundum est'</p>
             </div>
             <div className='bg-slate-200 text-center col-span-2 rounded-lg m-2 sm:col-span-1 md:col-span-2 lg:col-span-1 lg:col-start-4 hover:scale-95 hover:opacity-80'>
-                <button href="cvNicolas.pdf" target={'_blank'}>Download my CV here!</button>
+                <a href="cvNicolas.pdf" target={'_blank'}>Download my CV here!</a>
             </div>
         </div>
     )
