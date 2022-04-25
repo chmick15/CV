@@ -9,9 +9,9 @@ import Summary from "../components/home/summary/Summary";
 const Home = () => {
     return (
         <div className="grid grid-cols-6 col-auto">
-            <div className="grid col-span-6">
+            {/* <div className="grid col-span-6">
                 <Summary />
-            </div>
+            </div> */}
             <div className="grid col-span-6 bg-blue-400 justify-self-center mx-5 my-2 rounded-lg">
                 <Hero />
             </div>

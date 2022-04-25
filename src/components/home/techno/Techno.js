@@ -5,11 +5,11 @@ const Techno = () => {
     return (
         <div>
             <div className="grid grid-cols-3">
-                <div className="col-span-3 text-center p-2 bg-yellow-500 rounded-t-lg">
+                <div className="col-span-3 text-center p-2 bg-yellow-500 rounded-t-lg text-xl font-semibold">
                     <p>Technologies</p>
                 </div>
                 <div className="col-span-1 px-2">
-                    <div className='text-center'>
+                    <div className='text-center italic underline'>
                         <p>Front-End</p>
                     </div>
                     <p>HTML</p>
@@ -21,7 +21,7 @@ const Techno = () => {
                     <p>Redux</p>
                 </div>
                 <div className="col-span-1 px-2 justify-center">
-                    <div className='text-center'>
+                    <div className='text-center italic underline'>
                         <p>Back-End</p>
                     </div>
                     <p>Node.JS</p>
@@ -29,7 +29,7 @@ const Techno = () => {
                     <p>API</p>
                 </div>
                 <div className="col-span-1 px-2">
-                    <div className='text-center'>
+                    <div className='text-center italic underline'>
                         <p>Database</p>
                     </div>
                     <p>MongoDB</p>
