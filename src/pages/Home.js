@@ -24,7 +24,7 @@ const Home = () => {
             <div className="grid col-span-6 bg-green-400 my-2 mx-5 rounded-lg md:col-span-3 lg:col-span-2">
                 <Accomplishments />
             </div>
-            <div className="grid col-span-6 bg-orange-400 my-2 mx-5 rounded-lg md:col-span-3">
+            <div className="grid col-span-6 bg-orange-400 my-2 mx-5 rounded-lg md:col-span-3 lg:col-span-6">
                 <Contact />
             </div>
         </div>
