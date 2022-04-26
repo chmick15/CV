@@ -8,7 +8,7 @@ const Contact = () => {
                 <p>Contact</p>
             </div>
             <div className='p-2 lg:text-center lg:text-xl'>
-                <p>Do not hesitate to <a href='mailto:nikola.debray@hotmail.fr' className="text-white hover:opacity-80"> contact me here</a> by mail!</p>
+                <p>Do not hesitate to <a href='mailto:nikola.debray@hotmail.fr' className="text-white underline italic hover:opacity-80"> contact me here</a> by mail!</p>
             </div>
         </div>
     )

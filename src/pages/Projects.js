@@ -7,9 +7,9 @@ const Projects = () => {
             <div className="w-2/3 justify-self-center bg-slate-400 rounded-xl cursor-pointer hover:opacity-80 mb-5 md:mb-0 p-5">
                 <a href="/project/mvp" >
                     <img
-                    src="coverVeazit.jpg"
-                    alt="Veazit & Play"
-                    className="rounded-t-xl"
+                        src="coverVeazit.jpg"
+                        alt="Veazit & Play"
+                        className="rounded-t-xl"
                     />
                     <div className="bg-white">
                         <div className="text-center font-bold">
@@ -23,19 +23,19 @@ const Projects = () => {
             </div>
             <div className="w-2/3 justify-self-center bg-slate-400 rounded-xl cursor-pointer hover:opacity-80 p-5">
                 <a href="/project/movies">
-                <img
-                src="coverMovie.png"
-                alt="Movie App"
-                className="rounded-t-xl"
-                />
-                <div className="bg-white">
-                    <div className="text-center font-bold">
-                        <p>Movie App</p>
+                    <img
+                        src="coverMovie.png"
+                        alt="Movie App"
+                        className="rounded-t-xl"
+                    />
+                    <div className="bg-white">
+                        <div className="text-center font-bold">
+                            <p>Movie App</p>
+                        </div>
+                        <div className="text-justify px-2">
+                            <p>Have a look and search to the movies you would like to see (or not...)</p>
+                        </div>
                     </div>
-                    <div className="text-justify px-2">
-                        <p>Have a look and search to the movies you would like to see (or not...)</p>
-                    </div>
-                </div>
                 </a>
             </div>
         </div>

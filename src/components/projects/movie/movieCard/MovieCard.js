@@ -10,6 +10,7 @@ const MovieCard = ({ movie }) => {
         note = 'text-green-600'
     }
 
+
     return (
         <div className="flex flex-col bg-slate-600 m-2 p-4 rounded-lg">
             <div className="flex flex-col items-center text-white text-m font-bold sm:text-l text-center bg-green-200">

@@ -15,11 +15,11 @@ const Movies = () => {
         ).then((res) => setMoviesData(res.data.results))
     }, [searchMovie, page])
 
-    useEffect(() => {
-        axios.get(
-            `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=EN&include_image_language=en,null&query=${searchMovie}`
-        ).then((res) => setMoviesData(res.data.results))
-    }, [searchMovie, page])
+    // useEffect(() => {
+    //     axios.get(
+    //         `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=EN&include_image_language=en,null&query=${searchMovie}`
+    //     ).then((res) => setMoviesData(res.data.results))
+    // }, [searchMovie, page])
 
     const nextPage = () => {
         setPage(page + 1)
@@ -42,7 +42,7 @@ const Movies = () => {
 
     return (
         <div>
-            <SearchBar searchMovie={searchMovie} setSearchMovie={setSearchMovie} />
+            <SearchBar searchMovie={searchMovie} setSearchMovie={setSearchMovie} setMoviesData={setMoviesData} />
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
                 {moviesData.length > 0 ? moviesData.map((movie, index) => (
                     <MovieCard key={index} movie={movie} />
