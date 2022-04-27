@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
-import axios from 'axios';
+import React from "react";
 
 
-const SearchBar = ({ searchMovie, setSearchMovie, page, setMoviesData }) => {
+const SearchBar = ({ searchMovie, setSearchMovie }) => {
     const resetSearch = () => {
         setSearchMovie('')
     }
@@ -10,17 +9,6 @@ const SearchBar = ({ searchMovie, setSearchMovie, page, setMoviesData }) => {
     const search = () => {
         console.log('This button is useless but it is beautiful ');
     }
-
-    useEffect(() => {
-        const delay = setTimeout(() => {
-            console.log(searchMovie);
-            axios.get(
-                `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=EN&include_image_language=en,null&query=${searchMovie}`
-            ).then((res) => setMoviesData(res.data.results))
-        }, 650)
-
-        return () => clearTimeout(delay)
-    }, [searchMovie, page])
 
     return (
         <div className="flex flex-col items-center pt-3 px-2 focus:outline-none sm:flex-row">
@@ -40,7 +28,7 @@ const SearchBar = ({ searchMovie, setSearchMovie, page, setMoviesData }) => {
                     onClick={() => resetSearch()}
                     className="rounded-lg p-2 my-2 bg-green-800 w-full sm:w-1/6 text-white active:scale-95 sm:bg-white sm:text-slate-800 md:text-white md:bg-red-800 lg:bg-purple-800 active:opacity-50 hover:opacity-80">Reset</button>
             </div>
-        </div>
+        </div >
     )
 };
 

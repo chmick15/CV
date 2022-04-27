@@ -8,6 +8,7 @@ const Movies = () => {
     const [moviesData, setMoviesData] = useState([]);
     const [searchMovie, setSearchMovie] = useState('');
     const [page, setPage] = useState(1);
+    const [loader, setLoader] = useState(false);
 
     useEffect(() => {
         axios.get(
@@ -15,11 +16,22 @@ const Movies = () => {
         ).then((res) => setMoviesData(res.data.results))
     }, [searchMovie, page])
 
-    // useEffect(() => {
-    //     axios.get(
-    //         `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=EN&include_image_language=en,null&query=${searchMovie}`
-    //     ).then((res) => setMoviesData(res.data.results))
-    // }, [searchMovie, page])
+    useEffect(() => {
+        console.log('Should be false:' + loader);
+        setLoader(true)
+        const delay = setTimeout(() => {
+            axios.get(
+                `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=EN&include_image_language=en,null&query=${searchMovie}`
+            ).then((res) => setMoviesData(res.data.results))
+        }, 500)
+        console.log(moviesData);
+        console.log('Should be true:' + loader);
+        setLoader(false)
+        console.log('Should be false:' + loader);
+
+
+        return () => clearTimeout(delay)
+    }, [searchMovie, page])
 
     const nextPage = () => {
         setPage(page + 1)
