@@ -1,0 +1,23 @@
+
+    // useEffect(() => {
+    //     const discover = async () => {
+    //         const { data } = await axios.get(
+    //             `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=US&include_image_language=en,null`
+    //         )
+    //         setLoader(false)
+    //         setMoviesData(data.results)
+    //     }
+    //     discover()
+    // }, [searchMovie, page])
+
+    // useEffect(() => {
+    //     const searchMovieByKeyboard = async () => {
+    //         setLoader(true)
+    //         const { data } = await axios.get(
+    //             `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=EN&include_image_language=en,null&query=${searchMovie}`
+    //         )
+    //         setLoader(false)
+    //         setMoviesData(data.results)
+    //     }
+    //     searchMovieByKeyboard()
+    // }, [searchMovie, page])

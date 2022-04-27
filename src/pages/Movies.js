@@ -20,7 +20,7 @@ const Movies = () => {
                     axios.get(
                         `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=EN&include_image_language=en,null&query=${searchMovie}`
                     ).then((res) => setMoviesData(res.data.results))
-                }, 500)
+                }, 1050)
                 return () => clearTimeout(delay)
             }
         }
