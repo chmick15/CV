@@ -8,29 +8,23 @@ const Movies = () => {
     const [moviesData, setMoviesData] = useState([]);
     const [searchMovie, setSearchMovie] = useState('');
     const [page, setPage] = useState(1);
-    const [loader, setLoader] = useState(false);
 
     useEffect(() => {
-        axios.get(
-            `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=US&include_image_language=en,null`
-        ).then((res) => setMoviesData(res.data.results))
-    }, [searchMovie, page])
-
-    useEffect(() => {
-        console.log('Should be false:' + loader);
-        setLoader(true)
-        const delay = setTimeout(() => {
-            axios.get(
-                `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=EN&include_image_language=en,null&query=${searchMovie}`
-            ).then((res) => setMoviesData(res.data.results))
-        }, 500)
-        console.log(moviesData);
-        console.log('Should be true:' + loader);
-        setLoader(false)
-        console.log('Should be false:' + loader);
-
-
-        return () => clearTimeout(delay)
+        const fetchMovies = async () => {
+            if (searchMovie === '') {
+                axios.get(
+                    `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=US&include_image_language=en,null`
+                ).then((res) => setMoviesData(res.data.results))
+            } else {
+                const delay = setTimeout(() => {
+                    axios.get(
+                        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=EN&include_image_language=en,null&query=${searchMovie}`
+                    ).then((res) => setMoviesData(res.data.results))
+                }, 500)
+                return () => clearTimeout(delay)
+            }
+        }
+        fetchMovies()
     }, [searchMovie, page])
 
     const nextPage = () => {
