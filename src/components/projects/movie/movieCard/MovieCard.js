@@ -18,7 +18,7 @@ const MovieCard = ({ movie }) => {
                     {movie.poster_path ? <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} /> : <img src='../Dessin.png' alt={movie.title} />}
                     <h2>{movie.title}</h2>
                 </div>
-                <div className="bg-slate-500 opacity-0 group-hover:opacity-100 text-justify rounded-b-xl px-2 absolute transition-opacity duration-1000">
+                <div className="bg-slate-500 opacity-0 group-hover:opacity-100 text-justify rounded-b-xl px-2 absolute transition-opacity duration-1000 h-full overflow-auto">
                     <p>{movie.overview}</p>
                 </div>
             </div>
