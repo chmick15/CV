@@ -8,6 +8,7 @@ import Page404 from './pages/Page404';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Projects from './pages/Projects';
+import Timer from './pages/Timer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='projects' element={<Projects />} />
         <Route path='/project/movies' element={<Movies />} />
         <Route path='/project/MVP' element={<Mvp />} />
+        <Route path='/project/timer' element={<Timer />} />
         <Route path='*' element={<Page404 />} />
       </Routes>
     </BrowserRouter>
