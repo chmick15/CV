@@ -1,23 +1,71 @@
 
-    // useEffect(() => {
-    //     const discover = async () => {
-    //         const { data } = await axios.get(
-    //             `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=US&include_image_language=en,null`
-    //         )
-    //         setLoader(false)
-    //         setMoviesData(data.results)
-    //     }
-    //     discover()
-    // }, [searchMovie, page])
+//     // useEffect(() => {
+//     //     const discover = async () => {
+//     //         const { data } = await axios.get(
+//     //             `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=US&include_image_language=en,null`
+//     //         )
+//     //         setLoader(false)
+//     //         setMoviesData(data.results)
+//     //     }
+//     //     discover()
+//     // }, [searchMovie, page])
 
-    // useEffect(() => {
-    //     const searchMovieByKeyboard = async () => {
-    //         setLoader(true)
-    //         const { data } = await axios.get(
-    //             `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=EN&include_image_language=en,null&query=${searchMovie}`
-    //         )
-    //         setLoader(false)
-    //         setMoviesData(data.results)
-    //     }
-    //     searchMovieByKeyboard()
-    // }, [searchMovie, page])
+//     // useEffect(() => {
+//     //     const searchMovieByKeyboard = async () => {
+//     //         setLoader(true)
+//     //         const { data } = await axios.get(
+//     //             `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_MOVIE_DB}&language=en-EN&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&region=EN&include_image_language=en,null&query=${searchMovie}`
+//     //         )
+//     //         setLoader(false)
+//     //         setMoviesData(data.results)
+//     //     }
+//     //     searchMovieByKeyboard()
+//     // }, [searchMovie, page])
+
+//     import React, { useEffect, useState } from "react";
+
+// const Settings = () => {
+//     const [message, setMessage] = useState('')
+//     const [value, setValue] = useState('30')
+
+//     const tiime = new Date().toLocaleTimeString()
+
+//     const [time, setTime] = useState(``)
+
+
+//     const startTimer = () => {
+//         setTime(tiime)
+//     }
+
+//     setInterval(startTimer, 1000)
+
+
+
+//     return (
+//         <div>
+//             Settings of the timer
+//             <div>
+//                 <input placeholder="choose the message" value={message} onChange={(e) => setMessage(e.target.value)} />
+//             </div>
+//             <div>
+//                 <button onClick={() => setMessage(message)}>Validate</button>
+//             </div>
+//             <div>
+//                 <p>You choose: {message} as a message</p>
+//             </div>
+//             <div>
+//                 <input type={'range'} min={0} max={60} step={5} value={value} onChange={(e) => setValue(e.target.value)}></input>
+//             </div>
+//             <div>
+//                 <p>Value of the timer:{value}</p>
+//                 <p>it's {time}</p>
+
+//             </div>
+//             <div>
+//                 <button>Start Timer</button>
+//             </div>
+//         </div >
+//     )
+// }
+
+// export default Settings;
