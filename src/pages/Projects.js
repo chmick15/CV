@@ -39,7 +39,7 @@ const Projects = () => {
                 </a>
             </div>
             <div className="w-2/3 justify-self-center bg-slate-400 rounded-xl cursor-pointer hover:opacity-70 p-5">
-                <a href="/project/timer">
+                <a href="/project/todo">
                     <img
                         src="coverMovie.png"
                         alt="Movie App"
