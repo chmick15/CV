@@ -41,16 +41,16 @@ const Projects = () => {
             <div className="w-2/3 justify-self-center bg-slate-400 rounded-xl cursor-pointer hover:opacity-70 p-5">
                 <a href="/project/todo">
                     <img
-                        src="coverMovie.png"
-                        alt="Movie App"
+                        src="coverTodo.png"
+                        alt="Todo App"
                         className="rounded-t-xl"
                     />
                     <div className="bg-white">
                         <div className="text-center font-bold">
-                            <p>Timer App</p>
+                            <p>Todo App</p>
                         </div>
                         <div className="text-justify px-2">
-                            <p>Set the timer, work and receive an alert when the time is out</p>
+                            <p>Write what you have to do on a note and erase it once you dit it !</p>
                         </div>
                     </div>
                 </a>
