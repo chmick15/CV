@@ -36,7 +36,7 @@ const Accomplishments = () => {
                     <p>2017</p>
                 </div>
                 <div className='px-2 text-justify'>
-                    <p>Degree in modern languages (Spanish & English) International exchange in Bogotà (Colombia)🇨🇴 for one year</p>
+                    <p>Degree in modern languages (Spanish & English) International exchange in Bogotá (Colombia)🇨🇴 for one year</p>
                 </div>
             </div>
             <div className="grid col-span-5 py-1">
