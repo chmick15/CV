@@ -13,7 +13,7 @@ const MovieCard = ({ movie }) => {
 
     return (
         <div className="flex flex-col bg-slate-600 m-2 p-4 rounded-lg">
-            <div className="flex flex-col items-center group text-white text-m font-bold sm:text-l text-center relative hover-opacity-50 hover:grayscale hover::opacity-95 transition-all duration-1000">
+            <div className="flex flex-col items-center group text-white text-m font-bold sm:text-l text-center relative hover-opacity-50 hover:grayscale hover:opacity-95 transition-all duration-1000">
                 <div className="md:text-xl">
                     {movie.poster_path ? <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} /> : <img src='../Dessin.png' alt={movie.title} />}
                     <h2>{movie.title}</h2>

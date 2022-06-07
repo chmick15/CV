@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Projects from './pages/Projects';
 import TodoList from './pages/TodoList';
+import Timer from './pages/Timer'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/project/movies' element={<Movies />} />
         <Route path='/project/MVP' element={<Mvp />} />
         <Route path='/project/todo' element={<TodoList />} />
+        <Route path='/project/timer' element={<Timer />} />
         <Route path='*' element={<Page404 />} />
       </Routes>
     </BrowserRouter>
